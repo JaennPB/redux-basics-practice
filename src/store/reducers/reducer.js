@@ -19,7 +19,9 @@ const rootReducer = (state = initialState, action) => {
     case actionTypes.DEL_PERSON:
       return {
         ...state,
-        persons: state.persons.filter((person) => person.id !== action.id),
+        persons: state.persons.filter(
+          (person) => person.id !== action.personId
+        ),
       };
   }
   return state;
